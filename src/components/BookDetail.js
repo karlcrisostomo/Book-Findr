@@ -29,7 +29,7 @@ const BookDetails = () => {
     <div className="  sm:pt-[20%] lg:pt-10  p-6     mx-auto container">
       {isLoading ? (
         <Loader
-          classname=" max-sm:translate-y-1/2 max-sm:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl border-2  mx-auto"
+          classname=" max-sm:translate-y-1/2 max-sm:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl   mx-auto"
           width={1024}
           customX={400}
           customY={50}
