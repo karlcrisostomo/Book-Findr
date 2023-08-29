@@ -47,7 +47,7 @@ const Navbar = ({ setMenuOpen }) => {
 
 
   return (
-    <nav className="py-2  border-2 px-5   ">
+    <nav className="py-2  border-2    ">
       <div className="flex justify-between  max-sm:px-5  container mx-auto items-center">
         <Logo />
         {isMobile ? (

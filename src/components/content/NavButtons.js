@@ -11,7 +11,7 @@ const NavButtons = () => {
   const handleSlidePrev = useCallback(() => {
     if (!swiper.isBeginning) {
       swiper.slidePrev();
-    }
+  }
   }, [swiper]);
 
   const handleSlideNext = useCallback(() => {
@@ -21,7 +21,7 @@ const NavButtons = () => {
   }, [swiper]);
 
   return (
-    <div className="border-red-500 border-2 flex items-center absolute  bottom-0 z-50 right-0 ">
+    <div className= " flex items-center absolute  bottom-0 z-50 right-0 ">
       <MdOutlineKeyboardArrowLeft
         size={32}
         className={`cursor-pointer ${

@@ -3,7 +3,7 @@ import ContentLoader from "react-content-loader";
 
 const Loader = ({
   classname,
-  key,
+  id,
   width,
   height,
   customX,
@@ -11,7 +11,7 @@ const Loader = ({
   customY2,
 }) => (
   <ContentLoader
-    key={key}
+    id={id}
     speed={2}
     width={width}
     height={height}

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Garamond: "Ed Garamond",
+        Martian: "Martian Mono",
       },
       lineHeight: {
         "extra-tight": "3.2rem",

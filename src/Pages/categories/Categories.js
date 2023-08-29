@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryComponent from "./CategoryComponent";
 
+
 const Categories = () => {
   const genres = ["Fantasy", "Science Fiction", "Mystery", "Romance"];
 

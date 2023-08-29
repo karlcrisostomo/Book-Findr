@@ -9,8 +9,8 @@ const App = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-[#F5F5F7]">
-      <Router>
+    <div className="bg-[#F5F5F7] ">
+    <Router>
         <ResultProvider>
           <Navbar setMenuOpen={setMenuOpen} />
 

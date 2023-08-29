@@ -23,7 +23,7 @@ const HighRated = () => {
 
     const fetchAndCacheData = async () => {
       try {
-        const fetchedData = await fetchBooks("Science Fiction Books");
+        const fetchedData = await fetchBooks("Science Fiction Novels");
         setCachedFiction(fetchedData);
         localStorage.setItem("cachedFiction", JSON.stringify(fetchedData));
       } catch (error) {
@@ -38,7 +38,7 @@ const HighRated = () => {
 
   return (
     <div className="  relative  container  md:p-6 z-0   max-sm:max-w-sm mx-auto max-sm:p-4 sm:px-10  ">
-      <h1 className="  max-sm:text-xl sm:text-4xl pb-24 font-bold">
+      <h1 className=" font-Martian mt-20  after:block max-sm:text-xl sm:text-4xl pb-24 font-bold">
         High-rated Sci-Fi Books
       </h1>
       <Swiper
