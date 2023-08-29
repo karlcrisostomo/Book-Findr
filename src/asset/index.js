@@ -1,0 +1,1 @@
+export {default as headerImage} from "../asset/header-image.png"
