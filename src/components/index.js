@@ -8,3 +8,6 @@ export { default as Header } from "./Header";
 export { default as LinkButton } from "./LinkButton";
 export { default as BookDetail } from "./BookDetail";
 export { default as Loader } from "./Loader";
+export { default as Footer } from "./Footer";
+export { default as ErrorPage } from "./Error";
+export { default as Result } from "./Result";

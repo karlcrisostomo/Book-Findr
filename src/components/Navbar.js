@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SearchBar, Logo } from "./index";
-import { Link , useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
 import "animate.css";
@@ -42,9 +42,8 @@ const Navbar = ({ setMenuOpen }) => {
     if (isMobile) {
       toggleMenu();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
-
 
   return (
     <nav className="py-2  border-2    ">
@@ -82,7 +81,7 @@ const Navbar = ({ setMenuOpen }) => {
               <div
                 className={
                   link.text === "About"
-                    ? "hover:after:bg-black hover:after:w-[2em] sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-300 after:ease-in-out"
+                    ? "hover:after:bg-black hover:after:w-[2em] hover:font-bold  sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-300 after:ease-in-out"
                     : ""
                 }
               >
@@ -94,19 +93,20 @@ const Navbar = ({ setMenuOpen }) => {
                         : "/about"
                     }
                     onClick={(e) => {
-                      if (isMobile && window.location.pathname === "/") {
-                        e.preventDefault();
-                        toggleMenu();
-                      } else if (
-                        window.location.pathname === "/" &&
-                        !isMobile
-                      ) {
+                      if (isMobile) {
+                        if (window.location.pathname === "/") {
+                          toggleMenu();
+                        } else {
+                          toggleMenu(); // Close the menu when navigating to /about
+                          document.getElementById("about").scrollIntoView({
+                            behavior: "smooth",
+                          });
+                        }
+                      } else if (window.location.pathname === "/") {
                         e.preventDefault();
                         document.getElementById("about").scrollIntoView({
                           behavior: "smooth",
                         });
-                      } else if (isMobile) {
-                        toggleMenu();
                       }
                     }}
                   >
@@ -120,7 +120,7 @@ const Navbar = ({ setMenuOpen }) => {
                         toggleMenu();
                       }
                     }}
-                    className="hover:after:bg-black hover:after:w-[2em] sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-300 after:ease-in-out"
+                    className="hover:after:bg-black hover:after:w-[2em] hover:font-bold sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-300 after:ease-in-out"
                   >
                     {link.text}
                   </Link>

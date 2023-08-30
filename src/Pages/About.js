@@ -2,7 +2,7 @@ import React from "react";
 import { aboutBg } from "../asset";
 const About = () => {
   return (
-    <div className=" p-6 pt-12 sm:pt-20 ">
+    <div id="about" className=" p-6 pt-12 sm:pt-20 h-screen lg:pt-40 ">
       <section className=" container mx-auto">
         <div className=" flex flex-col md:flex-row md:max-w-4xl lg:max-w-6xl xl:max-w-none gap-2  mx-auto  max-sm:max-w-sm sm:max-w-sm">
           <div className="max-md:order-last md:order-2 mx-auto">
@@ -20,13 +20,12 @@ const About = () => {
               <header className=" mt-2 font-Martian text-4xl font-bold lg:text-6xl   ">
                 Behind the Pages
               </header>
-              <p className="  xl:max-w-xl  p-6 text-justify text-lg mt-12 bg-white/60 rounded-lg backdrop-blur-sm">
-                <span className=" font-medium lg:text-xl  ">
-                  Welcome to the backstage of Book Findr
-                </span>
-                , our passion project born from a love for reading. Join us as
-                we share the journey of creating a platform to explore, connect,
-                and celebrate books of all genres.
+              <p className="   xl:max-w-xl  p-6 text-justify text-lg mt-12 bg-white/60 rounded-lg backdrop-blur-sm">
+                Welcome to the backstage of
+                <span className=" font-bold lg:text-xl  "> Book Findr</span>,
+                our passion project born from a love for reading. Join us as we
+                share the journey of creating a platform to explore, and
+                celebrate books of all genres.
               </p>
             </div>
           </div>

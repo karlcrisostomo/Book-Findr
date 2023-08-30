@@ -1,14 +1,15 @@
 import React from "react";
-import { Hero, Header, HighRated } from "../components";
+import { Hero, Header, HighRated, Footer, ErrorPage } from "../components";
 import About from "./About";
+
 const Home = () => {
   return (
     <div>
       <Header />
       <Hero />
       <HighRated />
- 
-      <div id="about"><About/></div>
+      <About />
+      <Footer />
     </div>
   );
 };
