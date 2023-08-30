@@ -37,7 +37,7 @@ const HighRated = () => {
   }, []);
 
   return (
-    <div className="  container  md:p-6 z-0   max-sm:max-w-sm mx-auto max-sm:p-4 sm:px-10  ">
+    <div className="container max-md:mb-12 md:p-6 z-0 max-sm:max-w-sm mx-auto max-sm:p-4 sm:px-10  ">
       <h1 className=" font-Martian mt-20  after:block max-sm:text-xl sm:text-4xl pb-24 font-bold">
         High-rated Sci-Fi Books
       </h1>
@@ -78,20 +78,20 @@ const HighRated = () => {
               book.volumeInfo.averageRating >= 4
           )
           .map((book, idx) => (
-            <SwiperSlide className="xl:py-14   " key={idx}>
+            <SwiperSlide className="xl:py-14 " key={idx}>
               <a
                 href={`https://books.google.com.ph/books?id=${book.id}&source=gbs_navlinks_s`}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={idx}
               >
-                <div className="  cursor-pointer  max-sm:py-14    lg:max-w-lg mx-auto  py-6 bg-white  rounded-xl max-xl:bg-inherit  hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl xl:flex p-4 gap-5   ">
+                <div className="cursor-pointer lg:max-w-lg mx-auto     rounded-xl max-xl:bg-inherit  hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl xl:flex p-4 gap-5   ">
                   <img
                     className=" max-sm:w-[17em] sm:w-[15rem] sm:h-[20rem] rounded-xl border-gray border-[1px]  max-sm:h-96   xl:h-[16rem] xl:w-[12rem] xl:-translate-y-16    mx-auto aspect-square"
                     src={`https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w256-h256`}
                     alt={book.volumeInfo.title}
                   />
-                  <div className=" pt-7 max-sm:px-8 aspect-square   md:px-10  xl:px-0  sm:pt-6  sm:pb-20   ">
+                  <div className=" pt-7 max-sm:px-8 aspect-square max-sm:h-[18em]  mx-auto md:px-10  xl:px-0  sm:pt-6    ">
                     <h1 className=" font-bold tracking-wider ">
                       {book.volumeInfo.title}
                     </h1>

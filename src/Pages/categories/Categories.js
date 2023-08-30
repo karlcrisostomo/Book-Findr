@@ -35,7 +35,7 @@ const Categories = () => {
       ))}
 
       <div
-        className="fixed bottom-5 right-5 bg-gray-300 px-4 py-2 rounded-full cursor-pointer hover:bg-gray-400"
+        className="fixed bottom-5 right-5 bg-gray-300 px-4 py-2 rounded-full cursor-pointer  font-medium hover:bg-gray-400"
         onClick={scrollTop}
       >
         Scroll to Top

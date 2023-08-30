@@ -14,20 +14,19 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const searchResultsRef = useRef(null);
 
-const handleSearchChange = async (text) => {
-  setSearchText(text);
-  if (text === "") {
-    setSearchResult([]); // Clear search results when input is empty
-    setsearchQuery([]);
-    return;
-  }
-  const searchResults = await fetchBooks(text);
-  setsearchQuery(searchResults); // Update the searchQuery in context
-  setSearchResult(searchResults);
+  const handleSearchChange = async (text) => {
+    setSearchText(text);
+    if (text === "") {
+      setSearchResult([]); // Clear search results when input is empty
+      setsearchQuery([]);
+      return;
+    }
+    const searchResults = await fetchBooks(text);
+    setsearchQuery(searchResults); // Update the searchQuery in context
+    setSearchResult(searchResults);
 
-  localStorage.setItem("searchResults", JSON.stringify(searchResults));
-};
-
+    localStorage.setItem("searchResults", JSON.stringify(searchResults));
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -59,7 +58,7 @@ const handleSearchChange = async (text) => {
       setSearchResult(storedResults);
       setsearchQuery(storedResults);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearchResultClick = () => {
@@ -79,12 +78,10 @@ const handleSearchChange = async (text) => {
 
         {searchVisible && ( // Render search input and results only when visible
           <div
-            className={`px-4 sm:absolute  z-50    max-sm:bg-transparent   bg-[#F5F5F7] sm:rounded-b-2xl border-gray-300 border-b-2  w-full  left-0  pt-5  py-4  ${
-              searchVisible ? " animate__slideInDown" : " animate__slideOutUp"
-            }`}
+            className="px-4 sm:absolute z-50  max-sm:bg-transparent bg-[#F5F5F7] sm:rounded-b-2xl border-gray-300 border-b-2  w-full  left-0  pt-5  py-4 "
             ref={searchResultsRef} // Ref to the search results div
           >
-            <div className=" flex px-2 py-2 max-sm:max-w-md sm:max-w-lg xl:max-w-3xl  mx-auto   items-center  bg-white  rounded-md  ">
+            <div className=" flex px-2 py-2 max-sm:max-w-md sm:max-w-lg xl:max-w-3xl mx-auto items-center bg-white rounded-md  ">
               <AiOutlineSearch
                 size={24}
                 color=" gray"
@@ -140,7 +137,7 @@ const handleSearchChange = async (text) => {
                       />
                       <h2>{book.volumeInfo.title}</h2>
                     </Link>
-                    <span className="w-full h-0.5 block bg-black"></span>
+                    <span className="w-full h-0.5 block bg-gray-400"></span>
                   </div>
                 ))
               )}

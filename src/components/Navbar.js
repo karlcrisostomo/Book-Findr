@@ -46,13 +46,13 @@ const Navbar = ({ setMenuOpen }) => {
   }, [location]);
 
   return (
-    <nav className="py-2  border-2    ">
-      <div className="flex justify-between  max-sm:px-5  container mx-auto items-center">
+    <nav className="py-2 border-2 sm:px-4 ">
+      <div className="flex justify-between max-sm:px-5 container mx-auto items-center">
         <Logo />
         {isMobile ? (
           <RiCloseLine
             size={32}
-            className="sm:hidden  cursor-pointer z-50 "
+            className="sm:hidden cursor-pointer z-50 "
             onClick={toggleMenu}
           />
         ) : (
@@ -66,7 +66,7 @@ const Navbar = ({ setMenuOpen }) => {
         <ul
           className={`sm:flex ${
             isMobile
-              ? " pt-12 px-11   max-sm:absolute top-0 w-full right-0 bg-white  bottom-0 left-0 max-sm:h-screen"
+              ? " pt-12 px-11 max-sm:absolute top-0 w-full right-0 bg-white bottom-0 left-0 max-sm:h-screen"
               : "hidden "
           }   `}
         >
@@ -81,7 +81,7 @@ const Navbar = ({ setMenuOpen }) => {
               <div
                 className={
                   link.text === "About"
-                    ? "hover:after:bg-black hover:after:w-[2em] hover:font-bold  sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-300 after:ease-in-out"
+                    ? "hover:after:bg-black hover:after:w-[2em] hover:font-bold sm:hover:after:h-0.5 sm:hover:after:block sm:hover:after:absolute after:transition-all after:duration-500 after:ease-in-out"
                     : ""
                 }
               >

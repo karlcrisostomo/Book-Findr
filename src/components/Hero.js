@@ -60,7 +60,7 @@ const Header = () => {
                 {book.volumeInfo.description.substring(0, maxDescriptionLength)}
               </p>
 
-              <LinkButton book={book} className=" lg:w-[60%] text-lg" />
+              <LinkButton book={book} className=" sm:w-[80%] mx-auto lg:w-[70%] text-lg" />
             </div>
           </div>
         )}
