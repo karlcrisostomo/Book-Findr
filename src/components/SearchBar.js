@@ -14,20 +14,20 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const searchResultsRef = useRef(null);
 
-  const handleSearchChange = async (text) => {
-    setSearchText(text);
-    if (text === "") {
-      setSearchResult([]); // Clear search results when input is empty
-      setsearchQuery([]);
-      //hide the search-filter when the searchinput is empty
-      setSearchVisible(false);
+const handleSearchChange = async (text) => {
+  setSearchText(text);
+  if (text === "") {
+    setSearchResult([]); // Clear search results when input is empty
+    setsearchQuery([]);
+    return;
+  }
+  const searchResults = await fetchBooks(text);
+  setsearchQuery(searchResults); // Update the searchQuery in context
+  setSearchResult(searchResults);
 
-      return;
-    }
-    const searchResults = await fetchBooks(text);
-    setsearchQuery(searchResults);
-    setSearchResult(searchResults);
-  };
+  localStorage.setItem("searchResults", JSON.stringify(searchResults));
+};
+
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -51,6 +51,15 @@ const SearchBar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, []);
+
+  useEffect(() => {
+    const storedResults = JSON.parse(localStorage.getItem("searchResults"));
+    if (storedResults) {
+      setSearchResult(storedResults);
+      setsearchQuery(storedResults);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearchResultClick = () => {
@@ -79,7 +88,7 @@ const SearchBar = () => {
               <AiOutlineSearch
                 size={24}
                 color=" gray"
-              className="cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => {
                   setSearchVisible(false);
                   handleSearchChange(searchText);
@@ -87,7 +96,7 @@ const SearchBar = () => {
                 }}
               />
               <input
-                className="  w-full pl-2  focus:none  outline-none border-none bg-transparent"
+                className="  w-full pl-2 outline-none border-none bg-transparent"
                 placeholder="Search book here..."
                 type="text"
                 value={searchText}

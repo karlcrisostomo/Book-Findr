@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { fetchBooks } from "../api/books";
 import Loader from "./Loader";
 import LinkButton from "./LinkButton";
-
+import { useNavigate } from "react-router-dom";
 const BookDetails = () => {
   const { id } = useParams();
   const [bookDetails, setBookDetails] = useState(null);
   const [isLoading, setLoading] = useState(true);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const getBookDetails = async () => {
       try {
@@ -16,11 +16,12 @@ const BookDetails = () => {
         setBookDetails(fetchBookDetails[0]); // Assuming fetchBooks returns an array
         setLoading(false);
       } catch (error) {
-        console.log(error);
+        navigate("/error")
         setLoading(false);
       }
     };
     getBookDetails();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const maxDescription = 250;
