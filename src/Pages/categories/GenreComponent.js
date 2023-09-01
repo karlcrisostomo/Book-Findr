@@ -4,7 +4,7 @@ import Loader from "../../components/Loader";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const CategoryComponent = ({ genre }) => {
+const GenreComponent = ({ genre }) => {
   const [isLoading, setLoading] = useState(true);
   const [cachedBooks, setCachedBooks] = useState([]);
 
@@ -84,4 +84,4 @@ const CategoryComponent = ({ genre }) => {
   );
 };
 
-export default CategoryComponent;
+export default GenreComponent;

@@ -1,8 +1,7 @@
 import React from "react";
-import CategoryComponent from "./CategoryComponent";
-
-
-const Categories = () => {
+import GenreComponent from "./GenreComponent";
+import { BsArrowUp } from "react-icons/bs";
+const CategoryPage = () => {
   const genres = ["Fantasy", "Science Fiction", "Mystery", "Romance"];
 
   const handleCategoryClick = (genre) => {
@@ -31,17 +30,21 @@ const Categories = () => {
       </div>
 
       {genres.map((genre, index) => (
-        <CategoryComponent key={index} genre={genre} />
+        <GenreComponent key={index} genre={genre} />
       ))}
 
       <div
-        className="fixed bottom-5 right-5 bg-gray-300 px-4 py-2 rounded-full cursor-pointer  font-medium hover:bg-gray-400"
+        className="fixed bottom-20 right-5 bg-white w-[3em] group h-[12em] border-gray-600 border-2 rounded-full cursor-pointer  font-medium hover:bg-gray-200"
         onClick={scrollTop}
       >
-        Scroll to Top
+        <div  className="mx-auto  flex flex-col h-full items-center mt-4">
+          <BsArrowUp size={24} className=" mb-10"/>
+          <h1  className="-rotate-90 text-md font-bold text-lg  w-[4em] "> TO TOP</h1>
+              
+        </div>
       </div>
     </div>
   );
 };
 
-export default Categories;
+export default CategoryPage;

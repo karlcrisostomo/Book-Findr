@@ -2,7 +2,7 @@ export { default as Navbar } from "./Navbar";
 export { default as SearchBar } from "./SearchBar";
 export { default as Logo } from "./Logo";
 export { default as BookList } from "./BookList";
-export { default as HighRated } from "./content/HighRated";
+export { default as HighRated } from "./content/SubHero";
 export { default as Hero } from "./Hero";
 export { default as Header } from "./Header";
 export { default as LinkButton } from "./LinkButton";

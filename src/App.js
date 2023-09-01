@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { BookDetail, BookList, ErrorPage, Navbar } from "./components";
 import { ResultProvider } from "./context/ResultContext";
-import { About, Categories, Home } from "./Pages";
+import { About, CategoryPage, Home } from "./Pages";
 
 const App = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
@@ -17,10 +17,8 @@ const App = () => {
           <div className={MenuOpen ? " hidden" : "block"}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/books" element={<Categories />} />
-
+              <Route path="/books" element={<CategoryPage />} />
               <Route path="/about" element={<About />} />
-
               <Route path="/book-list" element={<BookList />} />
               <Route path="/book/:id" element={<BookDetail />} />
               <Route path="/error" element={<ErrorPage />} />

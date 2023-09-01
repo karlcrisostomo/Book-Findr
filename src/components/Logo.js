@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {  } from "../asset";
+import { brandName } from "../asset";
 
-const Logo = () => {
+
+const Logo = ({className}) => {
   return (
     <Link to="/">
-      -Reads
+     <img src={ brandName} className=" max-sm:w-[10em]  w-[15em] hover:scale-95 transition-all duration-500   " alt="Logo"/>
     </Link>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { aboutBg } from "../asset";
 const About = () => {
   return (
-    <div id="about" className=" p-6 pt-12 sm:pt-20 h-screen lg:pt-40 bg-white ">
+    <div id="about" className=" p-6 pt-12 sm:pt-20 py-32 lg:pt-40 bg-white ">
       <section className=" container mx-auto">
         <div className=" flex flex-col md:flex-row md:max-w-4xl lg:max-w-6xl xl:max-w-none gap-2  mx-auto  max-sm:max-w-sm sm:max-w-sm">
           <div className="max-md:order-last md:order-2 mx-auto">

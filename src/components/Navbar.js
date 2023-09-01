@@ -3,6 +3,8 @@ import { SearchBar, Logo } from "./index";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
+
+
 import "animate.css";
 
 const links = [
@@ -46,9 +48,9 @@ const Navbar = ({ setMenuOpen }) => {
   }, [location]);
 
   return (
-    <nav className="py-2 border-2 sm:px-4 ">
+    <nav className=" py-2 border-b-2 sm:px-4 ">
       <div className="flex justify-between max-sm:px-5 container mx-auto items-center">
-        <Logo />
+        <Logo className="" />
         {isMobile ? (
           <RiCloseLine
             size={32}
