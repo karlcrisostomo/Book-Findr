@@ -38,29 +38,32 @@ const Header = () => {
             {book.volumeInfo.imageLinks &&
               book.volumeInfo.imageLinks.thumbnail && (
                 <img
-                  className="mx-auto w-full lg:w-[400px]  lg:translate-y-[10em]  xl:translate-y-[6em]    xl:p-0     max-sm:pb-16"
+                  className="mx-auto w-full lg:w-[400px]  lg:translate-y-[10em]  xl:translate-y-[6em] xl:p-0 max-sm:pb-16"
                   src={`https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w256-h256`}
                   alt={book.volumeInfo.title}
                 />
               )}
-            <div className=" lg:px-10    max-sm:max-w-xs max-sm:p-4 sm:pt-16 ">
+            <div className=" lg:px-10 max-sm:max-w-xs max-sm:p-4 sm:pt-16 ">
               <h1 className=" sm:text-4xl font-bold max-sm:text-2xl ">
                 {book.volumeInfo.title}
               </h1>
-              <h1 className=" max-sm:text-sm text-xl max-sm:pb-6 pt-8">
+              <h1 className=" max-sm:text-base text-xl pt-8">
                 Author: {book.volumeInfo.authors.join(", ")}
               </h1>
-              <h1 className=" max-sm:text-sm text-xl max-sm:pb-6">
+              <h1 className=" max-sm:text-base text-xl max-sm:">
                 Publisher: {book.volumeInfo.publisher}
               </h1>
-              <h1 className=" max-sm:text-sm text-xl max-sm:pb-6 pb-14">
+              <h1 className=" max-sm:text-base text-xl max-sm:pb-6 pb-14">
                 Published: {book.volumeInfo.publishedDate}
               </h1>
-              <p className=" leading-snug sm:leading-relaxed text-justify max-sm:pt-6 max-sm:pb-5 sm:text-xl sm:pb-14">
+              <p className="  max-sm:leading-relaxed leading-snug sm:leading-relaxed text-justify max-sm:pt-6 max-sm:pb-5 sm:text-xl sm:pb-14">
                 {book.volumeInfo.description.substring(0, maxDescriptionLength)}
               </p>
 
-              <LinkButton book={book} className=" sm:w-[80%] mx-auto lg:w-[70%] text-lg" />
+              <LinkButton
+                book={book}
+                className=" sm:w-[80%] mx-auto lg:w-[70%] text-lg"
+              />
             </div>
           </div>
         )}
