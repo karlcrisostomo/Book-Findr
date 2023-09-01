@@ -39,7 +39,7 @@ const HighRated = () => {
   return (
     <div className="container max-md:mb-12 md:p-6 z-0 max-sm:max-w-sm mx-auto max-sm:p-4 sm:px-10  ">
       <h1 className=" font-Martian mt-20  after:block max-sm:text-xl sm:text-4xl pb-24 font-bold">
-       Top 10 Books
+        Top 10 Books
       </h1>
       <Swiper
         modules={[Pagination, Navigation]}
@@ -57,7 +57,7 @@ const HighRated = () => {
             slidesPerView: 3,
           },
         }}
-       
+        loop={true}
         onSwiper={(swiper) => swiper}
         pagination={{ clickable: true }}
       >
