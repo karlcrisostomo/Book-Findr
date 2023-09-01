@@ -11,7 +11,7 @@ const Footer = () => {
           <span className=" ml-3 animate-ping bg-black w-2 h-2 block rounded-full"></span>
         </h1>
         <h1 className="flex items-center">
-          Design and Coded by{" "}
+          Design and Coded by
           <span className=" ml-1 font-medium">Karl_Crisostomo</span>
           <a
             href="https://github.com/karlcrisostomo/Book-Findr.git"

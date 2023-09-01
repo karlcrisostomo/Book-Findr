@@ -57,7 +57,7 @@ const HighRated = () => {
             slidesPerView: 3,
           },
         }}
-        loop={true}
+        //loop={true}
         onSwiper={(swiper) => swiper}
         pagination={{ clickable: true }}
       >
