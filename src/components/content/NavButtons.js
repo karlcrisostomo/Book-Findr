@@ -25,7 +25,7 @@ const NavButtons = () => {
 
   return (
     <>
-      <div className="flexborder-red-500 overflow-hidden items-center absolute bottom-0 z-50 right-0">
+      <div className="flex border-red-500 overflow-hidden items-center absolute bottom-0 z-50 right-0">
         <MdOutlineKeyboardArrowLeft
           size={32}
           className={`cursor-pointer hover:scale-75 transition-all ${
