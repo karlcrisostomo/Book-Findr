@@ -27,10 +27,10 @@ const BookDetails = () => {
   const maxDescription = 250;
 
   return (
-    <div className="  sm:pt-[10%] lg:pt-10  p-6  mx-auto container">
+    <div className="sm:pt-[10%] lg:pt-10  p-6  mx-auto container">
       {isLoading ? (
         <Loader
-          classname="   h-screen max-sm:-translate-y-36 sm:-translate-y-32 max-sm:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl   mx-auto"
+          classname="h-screen max-sm:-translate-y-36 sm:-translate-y-32 max-sm:max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl   mx-auto"
           width={1024}
           customX={400}
           customY={50}
@@ -47,7 +47,7 @@ const BookDetails = () => {
                 key={bookDetails.id}
               >
                 <img
-                  className="  max-sm:w-[20em]  sm:w-[24em] sm:h-[30em] lg:h-[30em]    mx-auto  sm:aspect-square "
+                  className="max-sm:w-[20em]  sm:w-[24em] sm:h-[30em] lg:h-[30em] mx-auto sm:aspect-square "
                   src={`https://books.google.com/books/publisher/content/images/frontcover/${bookDetails.id}?fife=w256-h256`}
                   alt={bookDetails.volumeInfo.title}
                 />
