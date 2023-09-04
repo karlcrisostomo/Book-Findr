@@ -62,7 +62,7 @@ const Header = () => {
 
               <LinkButton
                 book={book}
-                className=" sm:w-[80%] mx-auto lg:w-[70%] text-lg"
+                className=" sm:w-[80%] mx-auto lg:mx-0 lg:w-[70%] text-lg"
               />
             </div>
           </div>
