@@ -7,6 +7,7 @@ import {
 
 const NavButtons = () => {
   const swiper = useSwiper();
+  // eslint-disable-next-line
   const [update, setUpdate] = useState(0);
 
   const handleSlidePrev = useCallback(() => {

@@ -18,7 +18,7 @@ const Header = () => {
     };
 
     const fetchData = async () => {
-      const fetchedBooks = await fetchBooks("The 48 Laws of Power");
+      const fetchedBooks = await fetchBooks("Atomic Habits");
 
       if (fetchedBooks.length > 0) {
         const fetchedBook = fetchedBooks[0];
@@ -29,12 +29,12 @@ const Header = () => {
 
     getCacheData();
   }, []);
-  const maxDescriptionLength = 689; // shortened the description to a desired substring
+  const maxDescriptionLength = 687; // shortened the description to a desired substring
   return (
-    <div className=" py-20 bg-white   lg:py-80  ">
-      <div className=" container mx-auto   max-sm:p-4 max-sm:pt-20 ">
+    <div className=" py-20 bg-white lg:py-80  ">
+      <div className=" container mx-auto max-sm:p-4 max-sm:pt-20 ">
         {book && (
-          <div className=" lg:grid-cols-2 lg:grid   max-sm:max-w-xs mx-auto  sm:max-w-lg lg:max-w-full lg:gap-20 ">
+          <div className=" lg:grid-cols-2 lg:grid max-sm:max-w-xs mx-auto  sm:max-w-lg lg:max-w-full lg:gap-20 ">
             {book.volumeInfo.imageLinks &&
               book.volumeInfo.imageLinks.thumbnail && (
                 <img
@@ -56,9 +56,15 @@ const Header = () => {
               <h1 className=" max-sm:text-base text-xl max-sm:pb-6 pb-14">
                 Published: {book.volumeInfo.publishedDate}
               </h1>
-              <p className="  max-sm:leading-relaxed leading-snug sm:leading-relaxed text-justify max-sm:pt-6 max-sm:pb-5 sm:text-xl sm:pb-14">
-                {book.volumeInfo.description.substring(0, maxDescriptionLength)}
-              </p>
+
+              {book && book.volumeInfo && book.volumeInfo.description && (
+                <p className="max-sm:leading-relaxed leading-snug sm:leading-relaxed text-justify max-sm:pt-6 max-sm:pb-5 sm:text-xl sm:pb-14">
+                  {book.volumeInfo.description.substring(
+                    0,
+                    maxDescriptionLength
+                  )}
+                </p>
+              )}
 
               <LinkButton
                 book={book}

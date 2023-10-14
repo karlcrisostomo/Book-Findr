@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiKey = "AIzaSyCkndErMqjAmZnGiVd5CFyE4dNdavwc13c"; // Replace with your API key
+const apiKey = "AIzaSyCkndErMqjAmZnGiVd5CFyE4dNdavwc13c"; 
 
 export const fetchBooks = async (any) => {
   try {

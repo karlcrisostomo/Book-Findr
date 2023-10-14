@@ -78,7 +78,7 @@ const SearchBar = () => {
 
         {searchVisible && ( // Render search input and results only when visible
           <div
-            className="px-4 sm:absolute z-50  max-sm:bg-transparent bg-[#F5F5F7] sm:rounded-b-2xl border-gray-300 border-b-2  w-full  left-0  pt-5  py-4 "
+            className="px-4 sm:absolute z-50  max-sm:bg-transparent bg-[#F5F5F7] sm:rounded-b-2xl border-gray-300 border-b-2  w-full left-0  pt-5  py-4 "
             ref={searchResultsRef} // Ref to the search results div
           >
             <div className=" flex px-2 py-2 max-sm:max-w-md sm:max-w-lg xl:max-w-3xl mx-auto items-center bg-white rounded-md  ">
@@ -93,7 +93,7 @@ const SearchBar = () => {
                 }}
               />
               <input
-                className="  w-full pl-2 outline-none border-none bg-transparent"
+                className="w-full pl-2 outline-none border-none bg-transparent"
                 placeholder="Search book here..."
                 type="text"
                 value={searchText}
